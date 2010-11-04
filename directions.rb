@@ -17,7 +17,7 @@ end
 def get_directions(start, slut)
   if start
     # uri(start, slut).to_s
-    Net::HTTP.get(uri(start, slut))
+    JSON.parse(Net::HTTP.get(uri(start, slut)))
   else
     nil
   end
