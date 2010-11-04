@@ -119,7 +119,9 @@ function drawDirections(map, street, color) {
 function initialize() {
   var kattesundet_1 = new google.maps.LatLng(55.6776014423565,
                                              12.5705311210751);
-  var myLatLng = kattesundet_1;
+  var hoejbro_plads = new google.maps.LatLng(55.6783941,
+                                             12.5802399);
+  var myLatLng = hoejbro_plads;
   var myOptions = {
     zoom: 15,
     center: myLatLng,
