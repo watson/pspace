@@ -18,6 +18,8 @@ def get_directions(start, slut)
   if start
     # uri(start, slut).to_s
     JSON.parse(Net::HTTP.get(uri(start, slut)))
+    sleep(0.1)
+    print "."
   else
     nil
   end
@@ -25,7 +27,7 @@ end
 
 # p observations.class
 
-urls = observations[0..3].map do |observation|
+urls = observations.map do |observation|
   # p observation
   start = observation['StartAdresse']['LngLat']
   slut = observation['SlutAdresse']['LngLat']
